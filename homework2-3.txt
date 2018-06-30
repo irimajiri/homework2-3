@@ -1,0 +1,23 @@
+import cv2
+import numpy as np
+
+kernel=np.array([[0,0,0],
+                 [-1,0,1],
+                 [0,0,0]])
+
+capture = cv2.VideoCapture(0)
+
+def edgefilter(x):
+    gray=cv2.cvtColor(frame,cv2.COLOR_RGB2GRAY)
+    y=cv2.filter2D(gray,cv2.CV_64F,kernel)
+    return y
+
+while(True):
+    ret, frame = capture.read()
+    cv2.imshow('frame1',frame)
+    cv2.imshow('frame4',edgefilter(frame))
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+capture.release()
+cv2.destroyAllWindows()
