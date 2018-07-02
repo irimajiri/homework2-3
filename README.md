@@ -35,3 +35,4 @@ cv2.destroyAllWindows()
 
 //フィルタリングとして輪郭検出を行った.
 //参考:https://algorithm.joho.info/programming/python/opencv-differential-filter-py/
+//YOUTUBE:https://www.youtube.com/watch?v=Cq78IFNu7HY&feature=youtu.be
